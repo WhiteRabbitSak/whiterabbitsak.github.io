@@ -16,58 +16,98 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 2000px;
+        height: 3000px;
         text-align: center;
         flex-direction: column;
+        background-color: #ffffff;
+        opacity: 0; /* Initially set opacity to 0 */
+        animation: fadeInAnimation 8s ease forwards; /* Animation properties */
     }
     .section {
-        height: 500px; 
-        width: 1190px;
-        background-color: #f9f6f5;
+        height: auto; 
+        width: 1620px;
+        background-color: lightpink;
         border-bottom: 1px solid #ccc;
         padding: 20px;
         box-sizing: border-box;
-        
-    }
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        }
     .hr{
         border: 2px solid #ccc
     }
+    .container {
+    background-color: #000000;
+    height: 600px; /* Adjust as per your requirement */
+    width: 600px; /* Adjust as per your requirement */
+    overflow: hidden; /* Ensure content within container doesn't overflow */
+    margin: auto; /* Center the container */
+    position: relative; /* Position the carousel buttons relative to this container */
+    padding: 10px;
+    border-radius: 10px;
+    }
+
     .carousel {
     position: relative;
-    max-width: 600px; /* Adjust the max width of the carousel */
-    margin: 0 auto;
+    height: calc(100% - 20px); /* Fill the remaining height after subtracting margin */
     }
-    .carousel-images {
+
+    .carousel-container {
     display: flex;
     overflow: hidden;
+    height: 100%; /* Fill the carousel height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     }
-    .carousel-images img {
+
+    .slide {
+    flex: 0 0 auto;
     width: 100%;
-    display: none;
+    display: flex;
+    justify-content: center;
     }
-    .prev, .next {
+
+    .slide img {
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    }
+    button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #000;
-    color: #fff;
     border: none;
+    font-size: 24px;
     cursor: pointer;
-    padding: 10px;
-    z-index: 1;
     }
     .prev {
-    left: 0;
+    left: 10px;
     }
     .next {
-    right: 0;
+    right: 10px;
     }
+    
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0; /* Start from opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade in to opacity 1 */
+    }
+}
+
 
 </style>
 </head>
 <body>
+
     <div class="TopContainer">
-        <img src="images\9b2922834e82fe3d98af5666a5dde6c7.jpg">
+        <img src="images\9b2922834e82fe3d98af5666a5dde6c7.jpg" style="margin-top:30px;">
 
 
 
@@ -78,16 +118,99 @@
             <p>This is the content of section 2.</p>
         </div>
 
+        <div> </div>
+        <div> </div>
+        <div> </div>
+        <div> </div>
 
 
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="images\img_1.jpg" alt="Image 1">
-                <img src="images\img_2.jpg" alt="Image 2">
-            </div>
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
+        <div class="section">
+            <h2>Memories</h2>
+            <div class="container">
+                <div class="carousel">
+                  <div class="carousel-container">
+                    <div class="slide"><img src="images\carousel images\1.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\2.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\3.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\4.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\5.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\6.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\7.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\8.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\9.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\10.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\11.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\12.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\13.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\14.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\15.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\16.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\17.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\18.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\19.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\20.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\21.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\22.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\23.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\24.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\25.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\26.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\27.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\28.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\29.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\30.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\31.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\32.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\33.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\34.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\35.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\36.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\37.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\38.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\39.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\40.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\41.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\42.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\43.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\44.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\45.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\46.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\47.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\48.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\49.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\50.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\51.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\52.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\53.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\54.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\55.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\56.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\57.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\58.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\59.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\60.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\61.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\62.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\63.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="images\carousel images\64.jpg" alt="Slide 1"></div>
+    
+    
+                  </div>
+                  <button class="prev" onclick="prevSlide()">❮</button>
+                  <button class="next" onclick="nextSlide()">❯</button>
+                </div>
+              </div>
+
         </div>
+
+
+
+
+
+          
+          
+        
+
         <script src="script.js"></script>
 
 
