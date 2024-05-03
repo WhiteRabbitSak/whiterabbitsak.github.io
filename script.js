@@ -23,3 +23,38 @@ function prevSlide() {
 
 // Show the initial slide
 showSlide(slideIndex);
+
+const apiURL = 'https://api.api-ninjas.com/v1/quotes?category=inspirational'; // Replace with your API URL
+const apiKey = 'OoJUPLCuR/3BqUgjKXh0xA==7HURdzTIgqGtqfAy'; // Replace with your actual API key
+
+function fetchData() {
+
+  const apiResponseElement = document.getElementById('api-response');
+  // Remove the fade-in class to reset the animation
+  apiResponseElement.classList.remove('fade-in');
+
+  fetch(apiURL, {
+    headers: {
+        'X-Api-Key': apiKey
+    }
+})
+.then(response => response.json())
+.then(data => {
+  const quote = data[0].quote;
+    // Update the content of the response div with the API data
+    apiResponseElement.innerHTML = `✨ ${quote} ✨`;
+    apiResponseElement.classList.add('fade-in');
+})
+.catch(error => console.error('Error fetching data:', error));
+}
+
+// Initial API call when the page loads
+window.onload = function() {
+    fetchData();
+};
+
+// Event listener for the reload button
+document.getElementById('api-button').addEventListener('click', function() {
+    fetchData();
+});
+

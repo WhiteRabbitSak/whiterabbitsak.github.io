@@ -16,10 +16,10 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 3000px;
+        height: 2290px;
         text-align: center;
         flex-direction: column;
-        background-color: #ffffff;
+        background-color: #ffe6ff;
         opacity: 0; /* Initially set opacity to 0 */
         animation: fadeInAnimation 8s ease forwards; /* Animation properties */
     }
@@ -34,12 +34,31 @@
         margin-right: 50px;
         margin-top: 30px;
         margin-bottom: 30px;
+        border-radius: 20px;
+        }
+        .memories {
+        height: auto; 
+        width: 820px;
+        background-color: lightpink;
+        border-bottom: 1px solid #ccc;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        }
+        .quotes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         }
     .hr{
-        border: 2px solid #ccc
+        border: 2px solid #ffffff
     }
     .container {
-    background-color: #000000;
+    background-color: transparent;
     height: 600px; /* Adjust as per your requirement */
     width: 600px; /* Adjust as per your requirement */
     overflow: hidden; /* Ensure content within container doesn't overflow */
@@ -82,14 +101,40 @@
     transform: translateY(-50%);
     border: none;
     font-size: 24px;
+    background-color: transparent;
     cursor: pointer;
     }
     .prev {
     left: 10px;
+    color: white;
     }
     .next {
     right: 10px;
+    color: white;
     }
+    .api-response {
+    width: 400px; /* Set width of the response container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    }
+    .api-button {
+        display: block;
+        margin: 20px auto; /* Center the button */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    .fade-in {
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeInAnimationQuote 2s ease forwards; /* Animation properties */
+    }
+
     
 
 @keyframes fadeInAnimation {
@@ -101,21 +146,46 @@
     }
 }
 
+@keyframes fadeInAnimationQuote {
+    from {
+        opacity: 0; /* Start from opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade in to opacity 1 */
+    }
+}
+
 
 </style>
 </head>
-<body>
+<body style="background-color: #ffe6ff;">
 
     <div class="TopContainer">
-        <img src="images\9b2922834e82fe3d98af5666a5dde6c7.jpg" style="margin-top:30px;">
+        <img src="images\9b2922834e82fe3d98af5666a5dde6c7.jpg" style="margin-top:30px; border-radius: 10px;">
+        
+        <img src="https://i.pinimg.com/originals/97/2c/bd/972cbd5b431eb155627690e4680e7a7f.gif" style="position: absolute; left: 10%; top: 7%; height: 300px; width: 300px;">
+        <img src="https://media1.tenor.com/m/JScwZptdCqMAAAAC/happy-birthday.gif" style="position: absolute; left: 75%; top: 50%; height: 300px; width: 300px;">
 
 
 
 
         <div class="section">
-            <h2>THE DETAILS</h2>
+            <h2>ִֶָ𓂃 ࣪˖ ִֶָ🐇་༘࿐⋆｡‧˚ʚ🍓ɞ˚‧｡⋆Happy Birthday To A Wonderful Person !!!⋆｡‧˚ʚ🍓ɞ˚‧｡⋆ִֶָ𓂃 ࣪˖ ִֶָ🐇་༘࿐</h2>
             <hr class="hr">
-            <p>This is the content of section 2.</p>
+            <p style="font-family: PalatinonovaW04-Light; font-size: 20px;">You thought I forgot about it huh? Didn't you Sakshi? </br>
+                But no I didn't! I have already missed too many of your birthdays and I am never going to miss another one. </br>
+                
+                </br>
+                Though time and distance may have kept us apart since our school days, I still remember the time we shared. </br>
+                As you start another year of your life, I want you to celebrate your kindness, your laughter, your success and your beautiful spirit...</br>
+                I am sure your this year will also be full of great achievements and I am sure your dreams will come true.</br>
+                Know that my thoughts are always with you, cheering you on every step of the way. </br>
+                And if you ever feel sad and I'm not there (which will NEVER happen lol), click the button below and it will give you a quote to cheer you up till I come!! 😊 </br>
+                
+            </br>
+            Finish your lab work and visit Bangalore someday, I am waiting for you...Happy Birthday Sakshi 🎂❤️
+
+            </p>
         </div>
 
         <div> </div>
@@ -124,8 +194,30 @@
         <div> </div>
 
 
-        <div class="section">
-            <h2>Memories</h2>
+        <div class="section" id="api-button">
+            <h2>Feeling low? Press me!!!</h2>
+            <hr class="hr">
+            <div class="quotes">
+            <div id="api-response" style="font-size: 20px; font-family: PalatinonovaW04-Light;"></div>
+            <div style="display: flex; flex-direction: row; margin-top: 10px;">
+                <img src="https://i.pinimg.com/originals/57/3e/f8/573ef8a82f3be88831bb4d22cc5eae29.gif", style="height: 70px; margin: 2px;">
+                <img src="https://media.tenor.com/MZ6C4OO8HvcAAAAM/pikachu-good-luck.gif", style="height: 70px;margin: 2px;">
+                <img src="https://media.tenor.com/jEgWCr8PzV4AAAAM/lucky-star-cute.gif", style="height: 70px;margin: 2px;">
+                <img src="https://media.tenor.com/tm0545oo-eoAAAAM/mochi-cat.gif", style="height: 70px;margin: 2px;">
+                <img src="https://media.tenor.com/RgLeC5NBSwAAAAAM/bye-wave.gif", style="height: 70px;margin: 2px;">
+            </div>    
+            </div>
+        </div>
+
+
+        <div class="memories">
+
+
+            <img src="images\vecteezy_ornament-border-design-with-flora-and-pink-flower-theme_13078289.png" style="position: absolute; left: 14.2%;top: 175.2%; height:820px;">
+
+
+
+            <a style="font-family: PalatinonovaW04-Light; font-size: 30px; font-style:oblique; font-style: bold; position: relative; top: 8%;">Memories we share...</br> And for many more to come...☄️</a>
             <div class="container">
                 <div class="carousel">
                   <div class="carousel-container">
@@ -204,12 +296,6 @@
         </div>
 
 
-
-
-
-          
-          
-        
 
         <script src="script.js"></script>
 
